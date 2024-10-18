@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../Imagens/GIGANTES\ DA\ COLINA.png'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    display: flex;
+    justify-content: flex-start; /* Alinhando à esquerda */
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-left: 4rem; /* Aumentando o padding à esquerda */
+}
+
+.login-container {
+    background-color: rgb(0, 0, 0); /* Fundo levemente transparente */
+    color:#fff;
+    padding: 4rem; /* Aumentando o padding interno */
+    border-radius: 80px;
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.674);
+    width: 600px; /* Aumentando a largura do contêiner */
+    margin-left: 2rem; /* Adicionando margem à esquerda para mover mais para a direita */
+}
+
+.login-form h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1rem; /* Aumentando o padding dos inputs */
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    font-size: 1rem; /* Aumentando a fonte */
+}
+
+.input-group input:focus {
+    border-color: #ffffff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 1rem; /* Aumentando o padding do botão */
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s; /* Adicionando uma transição suave */
+}
+
+button:hover {
+    background-color: #919191;
+}

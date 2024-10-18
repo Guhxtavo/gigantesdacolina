@@ -1,0 +1,267 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #191919; 
+  color: #ffffff; 
+}
+body.light{
+  background-color: #969696;
+  color:#000000
+}
+
+/*banner*/
+header {
+    text-align: center;
+    padding: 100px 0; 
+    background-image: url('../Imagens/3.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 100px 0;
+    height: 200px; 
+    background-color: #030303; 
+    position: relative;
+}
+body.light header{
+  background-image: url("../Imagens/4.png");
+}
+/*botão de modo light mode*/
+.switch {
+  font-size: 17px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+  z-index: 9999;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  border: 2px solid #414141;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: white;
+  border-radius: inherit;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.switch input:checked + .slider {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  border: 2px solid #ffffff;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+
+
+.content h2 {
+  color: #fffefe; 
+  border-bottom: 1px solid #ccc; 
+  padding-bottom: 5px; 
+}
+
+.container {
+  max-width: 100%; 
+}
+
+section {
+  max-width: 100%; 
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  
+}
+
+nav {
+  background-color: #000000;
+  text-align: center;
+  border-bottom: 2px solid #000000;
+  padding: 20px 0;
+  transition: background-color 0.3s ease;
+}
+
+body.light nav {
+  background-color:#414141;
+  border-bottom: #414141;
+}
+
+nav a {
+  color: #ffffff; 
+  text-decoration: none; 
+  padding: 10px 20px; 
+  margin: 0 15px; 
+  border-radius: 15px; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+body.light nav a{
+  color:#ffffff
+}
+
+nav a:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+body.light nav a:hover{
+  background-color: #eaeaea;
+  color:#ff0000
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box; 
+}
+.content h2 {
+  color: #fffefe; 
+  border-bottom: 1px solid #ccc; 
+  padding-bottom: 5px; 
+}
+
+.content {
+  width: 75%; 
+  padding: 10px;
+  text-align: center;
+  font-variant: all-petite-caps;
+  margin: 0 auto; 
+}
+
+section {
+  background-color: #000000; 
+  color: #ffffff;
+  padding: 20px; 
+  border-radius: 10px; 
+  margin: 20px auto; 
+  max-width: 800px; 
+  font-size: 1.2rem; 
+}
+body.light section {
+  background-color: #eaeaea ;
+  color:#030303;
+}
+
+h2 {
+  color: #ffffff;
+  font-variant: all-petite-caps;
+  width: 100%; 
+  padding: 10px;
+  text-align: center;
+}
+body.light h2{
+  color: #000000;
+}
+
+/*Tabela de campeonatos*/
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  }
+  th, td {
+  border: 1px solid #5f5f5f;
+  padding: 8px;
+  text-align: center;
+  }
+  body.light th, th{
+  border: #eaeaea;
+  }
+  
+  th {
+  background-color: #000000;
+  }
+  body.light th{
+  background-color: #ffffff;
+  }
+  
+  img {
+  max-width: 40px;
+  height: auto;
+  vertical-align: middle;
+  }
+
+  /*linha do tempo*/
+  .timeline {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  }
+  
+  .timeline ul {
+  list-style-type: none;
+  position: relative;
+  }
+  
+  .timeline ul li {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 40px;
+  background-color: #000000;
+  position: relative;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  }
+  body.light .timeline ul li {
+    background-color: #ffffff;
+  }
+  .timeline ul li:hover {
+    transform: translateY(-5px);
+  }
+  
+  .timeline ul li:nth-child(odd) .content {
+    text-align: right;
+  }
+  
+  .timeline ul li:nth-child(even) .content {
+    text-align: left;
+  }
+  
+  .timeline .content {
+    padding: 20px;
+  }
+  
+  .timeline h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ff0000; 
+  }
+  
+  .timeline p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #ffffff;
+  }
+  body.light p {
+    color: #000000;
+  }
+  .timeline img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 8px rgb(255, 255, 255);
+  }
