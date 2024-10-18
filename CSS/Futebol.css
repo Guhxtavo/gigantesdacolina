@@ -1,0 +1,360 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #191919; 
+  color: #fff; 
+}
+ body.light {
+  background-color: #727272;
+  color: #000000;
+}
+
+header {
+  background-image: url("Vasco_da_Gama-156962.jpg!d");
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: #fffbfb;
+  text-align: center;
+  padding: 100px 0;
+  height: 300px; 
+}
+ body.light header{
+  background-image: url("Vasco_00839833_0_.jpg");
+ }
+
+.switch {
+  font-size: 17px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+  z-index: 9999;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  border: 2px solid #414141;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: white;
+  border-radius: inherit;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.switch input:checked + .slider {
+box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+border: 2px solid #ffffff;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 25%; 
+  padding: 10px;
+  height: calc(100vh - 60px); 
+  margin-top: 60px; 
+  z-index: 1; 
+  position: fixed; 
+}
+nav {
+background-color: #000000;
+text-align: center;
+border-bottom: 2px solid #000000;
+padding: 20px 0;
+transition: background-color 0.3s ease;
+}
+
+body.light nav {
+  background-color:#414141;
+  border-bottom: #414141;
+}
+
+nav a {
+  color: #ffffff; 
+  text-decoration: none; 
+  padding: 10px 20px; 
+  margin: 0 15px; 
+  border-radius: 15px; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+body.light nav a{
+  color:#ffffff
+}
+
+nav a:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+body.light nav a:hover{
+  background-color: #eaeaea;
+  color:#ff0000
+}
+
+h3 {
+  text-align: center;
+  font-size: 36px;
+  color: #ff0000; 
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 20px 0;
+  padding: 10px;
+  background: linear-gradient(90deg, #ed0505, #100e0e); 
+  color: white;
+  border-radius: 10px;
+  display: inline-block; 
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.605); 
+}
+body.light h3 {
+  color:#000000
+  
+}
+/*carrossel de elenco*/
+button {
+    padding: 10px 20px; /* Tamanho menor */
+    background-color: #000;
+    border: none;
+    font-size: 14px; /* Tamanho da fonte menor */
+    position: relative;
+    overflow: hidden;
+    transition: 500ms;
+  }
+  body.light button{
+    background-color: #ffffff;
+  }
+  
+  button span {
+    color: gray;
+    position: relative;
+    transition: 500ms;
+    transition-delay: 500ms;
+    font-size: 12px; /* Tamanho da fonte menor */
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Espaçamento menor */
+    font-weight: 600;
+  }
+  
+  button:before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  bottom: 50%;
+  transition: 500ms;
+  transition-delay: 500ms;
+  background-color: rgb(255, 0, 0);
+  box-shadow: 0 0 10px red,
+  0 0 30px red, 
+   0 0 50px red;
+  }
+  
+  button div {
+  transition: 500ms;
+  position: absolute;
+  background-color: rgb(255, 0, 0);
+  box-shadow: 0 0 15px rgb(255, 0, 0), 0 0 30px rgb(255, 0, 0), 0 0 50px rgb(255, 0, 0);
+  }
+  body.light button div{
+    background-color: #000000;
+    box-shadow: 0 0 15px rgb(0, 0, 0), 0 0 30px rgb(0, 0, 0), 0 0 50px rgb(0, 0, 0);
+  }
+  
+  button .top {
+    width: 10px; /* Largura menor */
+    height: 2px;
+    top: 0;
+    left: 0;
+  }
+  
+  button .bottom {
+    width: 10px; /* Largura menor */
+    height: 2px;
+    bottom: 0;
+    right: 0;
+  }
+  
+  button .left {
+    width: 2px;
+    height: 10px; /* Altura menor */
+    top: 0;
+    left: 0;
+  }
+  
+  button .right {
+    width: 2px;
+    height: 10px; /* Altura menor */
+    bottom: 0;
+    right: 0;
+  }
+  
+  button:hover {
+    color: #000;
+  }
+  
+  button:hover span {
+    color: #000;
+  }
+  
+  button:hover:before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  button:hover .top, 
+  button:hover .bottom {
+    width: 100%;
+  }
+  
+  button:hover .left,
+  button:hover .right {
+    height: 100%;
+  }
+  
+.tabs {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+  margin: 20px 0;
+}
+
+.carousel-container {
+  position: relative;
+  width: 90%; /* Aumenta a largura do carrossel */
+  max-width: 900px; /* Ajusta a largura máxima */
+  margin: auto;
+  overflow: hidden;
+  border: 2px solid #ddd; /* Borda suave */
+  border-radius: 12px; /* Borda mais arredondada */
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para um efeito de profundidade */
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.1em; /* Fonte ligeiramente menor */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000; /* Fundo levemente cinza */
+  border-radius: 10px; /* Borda arredondada dos itens */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para destacar cada item */
+}
+body.light .carousel-item {
+  color: #ffffff;
+  background-color: #ddd;
+}
+.player-photo {
+  width: 180px; /* Ajuste o tamanho conforme necessário */
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px; /* Borda arredondada */
+  margin-bottom: 15px;
+}
+
+.player-info {
+  border: 1px solid #ff0000;
+  border-radius: 8px; /* Borda mais arredondada */
+  padding: 15px;
+  background-color: #191919;
+  box-shadow: 0 2px 4px rgba(255, 0, 0, 0.727); /* Sombra para um leve destaque */
+}
+body.light .player-info {
+  background-color: #eaeaea;
+}
+
+.player-info h2 {
+  margin-top: 0;
+  font-size: 1.5em; /* Tamanho maior para o título */
+  color: #ffffff;
+}
+body.light .player-info h2{
+  color:black
+}
+.player-info p {
+  margin: 8px 0; 
+  font-size: 1em; 
+  color: #ffffff; 
+}
+body.light .player-info p{
+  color:#000
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5); 
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5em;
+  transition: background 0.3s ease; 
+  z-index: 10; 
+}
+body.light .carousel-btn{
+  background: #fff;
+  color:#000000
+}
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.7); 
+}
+
+.carousel-btn.prev {
+    left: 15px; 
+}
+
+.carousel-btn.next {
+    right: 15px; 
+}
+
+.tab-content {
+    display: none;
+}

@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #000000;
+    color: #000000;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navigation {
+    background: #000000;
+    color: #ffffff;
+    padding: 50px 0;
+    border-bottom: #e8491d 4px solid;
+    margin: 0 90px; /* Margem entre os links */
+}
+
+header h1 {
+    float: left;
+}
+
+header nav {
+    float: right;
+}
+
+header nav a {
+    color: #000000; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+    padding: 10px 20px; /* Espaçamento interno dos links */
+    margin: 0 20px; /* Margem entre os links */
+    border-radius: 15px; /* Borda arredondada */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave de cor e fundo */
+    background-color: #ffffff;
+    border-bottom: 2px solid #020202;
+}
+
+nav a:hover {
+    background-color: #ff0303;
+    color: #ffffff;
+}
+.nav-links ul li a:hover {
+    background-color: #ffffff;
+    color: #ff0303;
+}
+
+main {
+    flex: 3;
+    padding: 20px 0;
+}
+
+article {
+    margin-bottom: 20px;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article h2 {
+    color: #35424a;
+    margin-bottom: 10px;
+}
+
+article .meta {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+article .noticia-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    margin-left: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    color: #35424a;
+    margin-bottom: 10px;
+}
+
+.sidebar .topics {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .topics li {
+    margin-bottom: 10px;
+}
+
+.sidebar .topics li:hover {
+    color: #e8491d;
+    cursor: pointer;
+}
+
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    width: 100%;
+}
