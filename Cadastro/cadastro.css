@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-image: none; /* Remova a imagem de fundo do body */
+    background-color: #000000;
+    margin:  0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.background-carousel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Coloque o carrossel de imagens atrás do conteúdo */
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    animation: carouselAnimation 20s infinite;
+}
+
+.slide:nth-child(1) {
+    background-image: url('Imagens (Cadastro)/vasco.jogador.jpg'); /* Substitua 'imagem1.jpg' pelo caminho da sua primeira imagem */
+    animation-delay: 10ms;
+}
+
+.slide:nth-child(2) {
+    background-image: url('Imagens (Cadastro)/vasco.torcida.webp'); /* Substitua 'imagem2.jpg' pelo caminho da sua segunda imagem */
+    animation-delay: 15s;
+}
+
+.slide:nth-child(3) {
+    background-image: url('Imagens (Cadastro)/vasco.resistiremos.jpg_large'); /* Substitua 'imagem3.jpg' pelo caminho da sua terceira imagem */
+    animation-delay: 10s;
+}
+
+@keyframes carouselAnimation {
+    0%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.8); /* Ajuste a opacidade conforme necessário */
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(255, 254, 254);
+    width: 400px;
+    max-width: 80%;
+    z-index: 1; /* Coloque o conteúdo sobre o carrossel de imagens */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3c3737;
+}
